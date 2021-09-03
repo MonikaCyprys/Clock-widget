@@ -1,0 +1,49 @@
+.clock {
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px;
+  font-size: 1rem;
+  color: whitesmoke;
+  display: flex;
+  flex-basis: 100%;
+  background-image: url("../../images/bg-light-small.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__quote {
+    padding-bottom: 1em;
+    font-size: 0.9em;
+    margin: 0 0 200px 0;
+    line-height: 1.5;
+    font-weight: 300;
+    opacity: 0.8;
+  }
+  &__welcome {
+    margin-top: auto;
+    flex-basis: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 4px;
+  }
+  &__time {
+    margin: 0.1em 0;
+    align-self: flex-start;
+    font-size: 6.5em;
+    font-weight: 700;
+  }
+  &__timezone {
+    width: auto;
+    font-size: 1rem;
+    align-self: center;
+  }
+  &__location {
+    flex-basis: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
