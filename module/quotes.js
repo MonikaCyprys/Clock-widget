@@ -16,7 +16,7 @@
       .catch(() => console.log("sth wrong"));
 
     async function getNewQuote() {
-      const { quote, author } = await randomQuote();
+      const { quote, author } = await randomQuote;
       putNewQuote(quote, author);
       return quote;
     }
