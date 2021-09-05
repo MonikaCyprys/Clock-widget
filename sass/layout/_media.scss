@@ -1,0 +1,35 @@
+@mixin breakpoint($point) {
+  @if $point == neptune {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  } @else if $point == uranus {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point == saturn {
+    @media (min-width: 1030px) {
+      @content;
+    }
+  } @else if $point == jupiter {
+    @media (min-width: 930px) {
+      @content;
+    }
+  } @else if $point == mars {
+    @media (min-width: 800px) {
+      @content;
+    }
+  } @else if $point == earth {
+    @media (min-width: 650px) {
+      @content;
+    }
+  } @else if $point == venus {
+    @media (min-width: 568px) {
+      @content;
+    }
+  } @else if $point == mercury {
+    @media (min-width: 400px) {
+      @content;
+    }
+  }
+}

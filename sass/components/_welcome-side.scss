@@ -2,7 +2,6 @@
   width: 100%;
   min-height: 100vh;
   padding: 7%;
-  font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -10,13 +9,29 @@
   background-image: url("../../images/bg-light-small.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: 1rem;
+  @include breakpoint(venus) {
+    font-size: 1.3rem;
+  }
+  @include breakpoint(jupiter) {
+    font-size: 1.6rem;
+  }
+  @include breakpoint(mars) {
+    padding: 7% 35% 10% 7%;
+  }
 
   &__quote {
     font-size: 0.9em;
-    margin: 0 0 50px 0;
     line-height: 1.5;
     font-weight: 300;
+    margin: 0 0 70px 0;
+    height: 150px;
+    width: 100%;
     opacity: 0.8;
+    @include breakpoint(jupiter) {
+      margin: 0 0 150px 0;
+      font-size: 0.7em;
+    }
   }
 
   &__details {
