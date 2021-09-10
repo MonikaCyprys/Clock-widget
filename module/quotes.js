@@ -1,4 +1,10 @@
 (function () {
+  window.setTimeout(function () {
+    setInterval(function () {
+      showQuote();
+    }, 240000);
+  }, 0);
+
   function showQuote() {
     const url = "http://quotes.stormconsultancy.co.uk/random.json";
 
@@ -29,8 +35,4 @@
     }
     getNewQuote();
   }
-
-  window.setInterval(function () {
-    showQuote();
-  }, 4000);
 })();
