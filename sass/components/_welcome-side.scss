@@ -6,7 +6,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   color: whitesmoke;
-  background-image: url("../../images/bg-light-small.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 1rem;
@@ -17,7 +16,7 @@
     font-size: 1.6rem;
   }
 
-  &__quote {
+  .quote {
     font-size: 0.9em;
     line-height: 1.5;
     font-weight: 300;
@@ -32,6 +31,9 @@
       margin: 0 0 150px 0;
       font-size: 0.7em;
     }
+    &__author {
+      font-weight: 700;
+    }
   }
 
   &__details {
@@ -41,17 +43,15 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    &__welcome {
-      font-size: 1em;
+    &__info {
+      font-size: 0.65em;
       text-transform: uppercase;
-      font-weight: 300;
       letter-spacing: 4px;
       flex-basis: 100%;
     }
     &__time {
       font-size: 6.5em;
       font-weight: 700;
-      margin: 10px 0;
     }
     &__timezone {
       align-self: center;
