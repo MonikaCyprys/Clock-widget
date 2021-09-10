@@ -15,7 +15,9 @@
   @include breakpoint(jupiter) {
     font-size: 1.6rem;
   }
-
+  @include breakpoint(neptune) {
+    font-size: 2rem;
+  }
   .quote {
     font-size: 0.9em;
     line-height: 1.5;

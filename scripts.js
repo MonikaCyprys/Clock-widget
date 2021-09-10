@@ -1,5 +1,5 @@
 (function () {
-  const welcomeSide = document.querySelector(".welcome-side");
+  const bg = document.querySelector(".welcome-side");
   const widthDevice = window.innerWidth;
 
   window.addEventListener("resize", changePhoto);
@@ -8,11 +8,11 @@
   function changePhoto(e) {
     const width = e.target.innerWidth;
     if (width >= 440 || widthDevice >= 440) {
-      welcomeSide.style.backgroundImage =
-        'url("../../images/bg-light-big.jpg")';
+      const toBig = bg.style.backgroundImage.replace("small", "big");
+      bg.style.backgroundImage = toBig;
     } else {
-      welcomeSide.style.backgroundImage =
-        'url("../../images/bg-light-small.jpg")';
+      const toSmall = bg.style.backgroundImage.replace("big", "small");
+      bg.style.backgroundImage = toSmall;
     }
   }
   window.addEventListener("resize", changePadding);
@@ -27,12 +27,12 @@
       e.target.innerWidth === undefined ? widthDevice : e.target.innerWidth;
 
     if (widthDevice > minDeviceWidth || width > minDeviceWidth) {
-      const newPadding = width - minDeviceWidth + padding;
+      const newPadding = width - minDeviceWidth - padding;
 
-      welcomeSide.style.paddingRight =
+      bg.style.paddingRight =
         newPadding <= maxPadding ? newPadding + "px" : "1042px";
     } else {
-      welcomeSide.style.paddingRight = "7%";
+      bg.style.paddingRight = "7%";
     }
   }
 })();

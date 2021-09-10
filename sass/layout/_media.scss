@@ -1,6 +1,6 @@
 @mixin breakpoint($point) {
   @if $point == neptune {
-    @media (min-width: 1600px) {
+    @media (min-width: 1800px) {
       @content;
     }
   } @else if $point == uranus {
