@@ -47,14 +47,17 @@
     <script src="./scripts.js"></script>
     <script type="module" src="./module/quotes.js"></script>
     <script type="module" src="./module/clock.js"></script>
-<script>
-  window.addEventListener("load", function(){
-    const loader = document.querySelector(".loader");
-    loader.classList.add("loader--finish");
-    loader.addEventListener("transitionend", function() {
-      loader.remove();
-    }) 
-  })
-</script>
+    <script>
+      window.addEventListener("load", function(){
+        const loader = document.querySelector(".loader");
+
+        window.setTimeout(function(){
+          loader.classList.add("loader--finish");
+        }, 1000)
+        loader.addEventListener("transitionend", function() {
+          loader.remove();
+        }) 
+      })
+    </script>
   </body>
 </html>
