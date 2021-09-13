@@ -1,11 +1,11 @@
 (function () {
   const bg = document.querySelector(".welcome-side");
-  const widthDevice = window.innerWidth;
 
   window.addEventListener("resize", changePhoto);
-  window.addEventListener("DOMContentLoaded", changePhoto);
+  window.addEventListener("load", changePhoto);
 
   function changePhoto(e) {
+    const widthDevice = window.innerWidth;
     const width = e.target.innerWidth;
     if (width >= 440 || widthDevice >= 440) {
       const toBig = bg.style.backgroundImage.replace("small", "big");
@@ -16,21 +16,18 @@
     }
   }
   window.addEventListener("resize", changePadding);
-  window.addEventListener("DOMContentLoaded", changePadding);
+  window.addEventListener("load", changePadding);
 
   function changePadding(e) {
+    const widthDevice = window.innerWidth;
     const padding = 42;
-    const maxPadding = 1000 + padding;
     const minDeviceWidth = 600;
 
     const width =
       e.target.innerWidth === undefined ? widthDevice : e.target.innerWidth;
 
     if (widthDevice > minDeviceWidth || width > minDeviceWidth) {
-      const newPadding = width - minDeviceWidth - padding;
-
-      bg.style.paddingRight =
-        newPadding <= maxPadding ? newPadding + "px" : "1042px";
+      bg.style.paddingRight = padding + (widthDevice - minDeviceWidth) + "px";
     } else {
       bg.style.paddingRight = "7%";
     }
