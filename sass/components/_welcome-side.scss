@@ -1,13 +1,11 @@
 .welcome-side {
-  width: 100%;
-  min-height: 100vh;
   padding: 7%;
   display: flex;
+  max-width: 1200px;
+  min-height: 100vh;
   flex-wrap: wrap;
   justify-content: space-between;
   color: whitesmoke;
-  background-repeat: no-repeat;
-  background-size: cover;
   font-size: 1rem;
   @include breakpoint(venus) {
     font-size: 1.3rem;
@@ -17,6 +15,7 @@
   }
   @include breakpoint(neptune) {
     font-size: 2rem;
+    padding: 4% 7%;
   }
   .quote {
     font-size: 0.9em;
@@ -28,10 +27,15 @@
     opacity: 0.8;
     @include breakpoint(venus) {
       font-size: 0.7em;
+      max-width: 400px;
     }
     @include breakpoint(jupiter) {
       margin: 0 0 150px 0;
       font-size: 0.7em;
+      max-width: 500px;
+    }
+    @include breakpoint(neptune) {
+      max-width: 650px;
     }
     &__author {
       font-weight: 700;
@@ -44,7 +48,8 @@
   .clock {
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
+    max-width: 650px;
+    align-content: center;
     &__info {
       font-size: 0.65em;
       text-transform: uppercase;

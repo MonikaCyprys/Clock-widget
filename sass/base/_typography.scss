@@ -7,3 +7,10 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+main {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: cadetblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
