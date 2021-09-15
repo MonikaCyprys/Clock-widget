@@ -7,6 +7,7 @@ This project is inspired from Frontend Mentor challenge. It shows clock widget w
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Links](#Links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -21,8 +22,12 @@ Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See your location based on user public IP
-- Different background image depends on your day/night time
-- Different quotes after every 4 minutes
+- Get different background image depends on your day/night time
+- Get different quotes after every 4 minutes
+
+### Links
+
+- quotes API: [author](https://github.com/lukePeavey/quotable)
 
 ## My process
 
