@@ -2,18 +2,18 @@
   window.setTimeout(function () {
     setInterval(function () {
       showQuote();
-    }, 240000);
+    }, 24000);
   }, 0);
 
   function showQuote() {
-    const url = "http://quotes.stormconsultancy.co.uk/random.json";
+    const url = "https://api.quotable.io/random?tags=technology,famous-quotes";
 
     async function getRandomQuote(url) {
-      const { quote, author } = await fetch(url)
+      const { content, author } = await fetch(url)
         .then((r) => r.json())
         .then((r) => r);
       return {
-        quote: quote,
+        quote: content,
         author: author,
       };
     }
